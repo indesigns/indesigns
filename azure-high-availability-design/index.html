@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv='content-language' content='en-us'>
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Azure High Availability Design, Services - there are many software components within Azure Stack each providing leveraging high availability to keep the service up in the event of underlying HW failure.">
+
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+
+    
+<title>19 New Azure high availability design for Kindergarten | All IDesign ideas</title>
+<meta name="url" content="https://indesigns.github.io/azure-high-availability-design/" />
+<meta property="og:url" content="https://indesigns.github.io/azure-high-availability-design/">
+<meta property="article:author" content="Petter"> 
+<meta name="author" content="Petter">
+<meta name="geo.region" content="US">
+<meta name="geo.region" content="GB">
+<meta name="geo.region" content="CA">
+<meta name="geo.region" content="AU">
+<meta name="geo.region" content="IT">
+<meta name="geo.region" content="NL">
+<meta name="geo.region" content="DE">
+<link rel="canonical" href="https://indesigns.github.io/azure-high-availability-design/">
+<link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+<link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com">
+<link rel="preconnect" href="https://code.jquery.com">
+<link rel="dns-prefetch" href="https://code.jquery.com">
+<link rel="preconnect" href="https://i.pinimg.com">
+<link rel="dns-prefetch" href="https://i.pinimg.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://indesigns.github.io/assets/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://indesigns.github.io/assets/css/main.css">
+<link rel="stylesheet" href="https://indesigns.github.io/assets/css/theme.css">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "19 New Azure high availability design for Kindergarten",
+    "headline": "19 New Azure high availability design for Kindergarten",
+    "alternativeHeadline": "",
+    "description": "In this course Microsoft Azure Solutions Architect. First you will discover the Azure global infrastructure. Azure high availability design",
+    "inLanguage": "en-us",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/indesigns.github.io\/azure-high-availability-design\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": "Petter"
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": "Petter"
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": "Petter"
+    },
+    "copyrightHolder" : "All IDesign ideas",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-04-17T00:29:49.00Z",
+    "datePublished": "2021-04-17T00:29:49.00Z",
+    "dateModified": "2021-04-17T00:29:49.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "All IDesign ideas",
+        "url": "https://indesigns.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/indesigns.github.io\/logo.png",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "https://indesigns.github.io/logo.png",
+    "url" : "https:\/\/indesigns.github.io\/azure-high-availability-design\/",
+    "wordCount" : "1364",
+    "genre" : [ "coloring pages" ],
+    "keywords" : [ "Azure" , "high" , "availability" , "design" ]
+}
+</script>
+
+</head>
+  <body>    
+    <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="https://indesigns.github.io/"><span style="text-transform: capitalize;font-weight: bold;">All IDesign ideas</strong></a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+               
+               <li class="nav-item"><a class="nav-link" href="https://indesigns.github.io/contact/">Contact</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://indesigns.github.io/dmca/">Dmca</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://indesigns.github.io/privacy-policy/">Privacy Policy</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://indesigns.github.io/about/">About</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://indesigns.github.io/categories/drawing-online/" title="Drawing Online">Drawing Online</a></li></ul>
+        </div>
+    </div>
+    </nav>
+    <main role="main" class="site-content">
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row justify-content-between ">
+                <div class=" col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+                    <p class="text-uppercase font-weight-bold"><span class="catlist"><a class="sscroll text-danger" href="https://indesigns.github.io/categories/drawing-online"/>Drawing Online</a> . </span></p>
+                    <h1 class="display-4 mb-4 article-headline">19 New Azure high availability design for Kindergarten</h1>
+                    <div class="d-flex align-items-center">
+                        <small class="ml-3">Written by Petter <span class="text-muted d-block mt-1">Apr 17, 2021 · <span class="reading-time">7 min read</span></span></small>
+                    </div>
+                </div>
+                <div class="col-md-6 pr-0 align-self-center">
+                    <img class="rounded" src="https://www.cloudmovement.co.uk/wp-content/uploads/2019/10/3ea59a64-bd5b-4eef-bf86-099702811a61.png" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" alt="19 New Azure high availability design for Kindergarten"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-lg pt-4 pb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+            <article class="article-post">
+            <p>In this course Microsoft Azure Solutions Architect. First you will discover the Azure global infrastructure. Azure high availability design</p><center>
+	
+</center> <!-- Head tag Code -->
+<p><strong>Azure High Availability Design</strong>, Services - there are many software components within Azure Stack each providing leveraging high availability to keep the service up in the event of underlying HW failure. Updated high availability and disaster recovery app design guidance. High availability is always of great concern for any IT administrator whether it is on-premises or using cloud services. Were pleased to announce that weve updated our guidance article on disaster recovery and high availability for applications built on Microsoft Azure.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://mountainss.files.wordpress.com/2018/12/networking-high-level-workloads.png" alt="Microsoft Azure Virtual Datacenter Hub Spoke Model A Network Perspective Cloud Azure Security Cloud And Datacenter Management Blog" title="Microsoft Azure Virtual Datacenter Hub Spoke Model A Network Perspective Cloud Azure Security Cloud And Datacenter Management Blog" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Microsoft Azure Virtual Datacenter Hub Spoke Model A Network Perspective Cloud Azure Security Cloud And Datacenter Management Blog From mountainss.wordpress.com</p>
+<p>At the rack level we have redundant ToR switches. Deploying VMs across Availability Zones helps to protect an application against datacenter-wide failures. Your applications need to be highly available. As Ive previously mentioned horizontal auto-scaling exists to address performance concerns rather than high-availability concerns.</p>
+<h3 id="services---there-are-many-software-components-within-azure-stack-each-providing-leveraging-high-availability-to-keep-the-service-up-in-the-event-of-underlying-hw-failure">Services - there are many software components within Azure Stack each providing leveraging high availability to keep the service up in the event of underlying HW failure.</h3><p><strong>Read another article</strong>:<br>
+<span class="navi text-left"><a class="badge badge-secondary" href="/bannerman-garden-design/">Bannerman garden design</a></span>
+<span class="navi text-left"><a class="badge badge-info" href="/banx-designs/">Banx designs</a></span>
+<span class="navi text-left"><a class="badge badge-primary" href="/barbie-designable-hair-extensions-and-doll/">Barbie designable hair extensions and doll</a></span>
+<span class="navi text-left"><a class="badge badge-primary" href="/barbie-clothes-design/">Barbie clothes design</a></span>
+<span class="navi text-left"><a class="badge badge-success" href="/banner-designs-114-4/">Banner designs 114 4</a></span></p>
+<p>Wait for the machine to get to the Running state. VM-Series high availability on Azure can be achieved using Azure Availability sets combined with Application Gateway and Load Balancer integration. For a list of supported regions and services see What are. Increase application resiliency and availability supported by 9999 uptime SLA for virtual machines. In this course Designing for High Availability on Microsoft Azure you will learn foundational knowledge of high availability using different services in Azure.</p>
+<div class="d-block p-4">
+	<center>
+		 <script type="text/javascript">
+	atOptions = {
+		'key' : '044478bac56eb613662b93ef204db084',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.creativeformatsnetwork.com/044478bac56eb613662b93ef204db084/invoke.js"></scr' + 'ipt>');
+		</script>
+	</center>
+</div>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/fe/db/ff/fedbff13ac9b9d843b353b39d288a018.png" alt="Highly Available Multi Region Web Application Azure Reference Architectures Microsof Web Application Architecture Business Continuity Data Science Learning" title="Highly Available Multi Region Web Application Azure Reference Architectures Microsof Web Application Architecture Business Continuity Data Science Learning" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>VM-Series high availability on Azure can be achieved using Azure Availability sets combined with Application Gateway and Load Balancer integration. Next youll discover things like availability zones fault- and update domains and redundant storage. This network design increases the Tenants Azure Cloud resources to be highly available and secure through the use of IPsec tunnels. In this course Microsoft Azure Solutions Architect. Highly Available Multi Region Web Application Azure Reference Architectures Microsof Web Application Architecture Business Continuity Data Science Learning.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://aviatrix.com/wp-content/uploads/2020/08/nva-image-1.png" alt="What Is Azure Network Virtual Appliance Nva Aviatrix" title="What Is Azure Network Virtual Appliance Nva Aviatrix" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: aviatrix.com</p>
+<p>Dfsavset 3 Leave the default endpoints for RDP and Remote PowerShell finish the wizard. A high availability HA ports load-balancing rule is a variant of a load-balancing rule configured only on an internal Standard Load Balancer and helps you load-balance TCP and UDP flows on all ports simultaneously. Figure 10 High Availability network for Azure. For a list of supported regions and services see What are. What Is Azure Network Virtual Appliance Nva Aviatrix.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://siliconvalve.files.wordpress.com/2020/11/as02.png?w=1024&amp;amp;h=474" alt="Understanding Azure Availability Sets And Availability Zones Siliconvalve" title="Understanding Azure Availability Sets And Availability Zones Siliconvalve" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: blog.siliconvalve.com</p>
+<p>The current marketplace FortiGate HA option in Azure is a highly scalable HA design. VM-Series high availability on Azure can be achieved using Azure Availability sets combined with Application Gateway and Load Balancer integration. Design for High Availability youll learn to design highly available applications in Azure. First you will discover the Azure global infrastructure. Understanding Azure Availability Sets And Availability Zones Siliconvalve.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://campus.barracuda.com/resources/attachments/image/84313265/1/az_std_ha_diagram.png" alt="How To Configure A High Availability Cluster In Azure With The Standard Load Balancer Barracuda Campus" title="How To Configure A High Availability Cluster In Azure With The Standard Load Balancer Barracuda Campus" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: campus.barracuda.com</p>
+<p>We heard from you that one of the most useful documents we provided in designing your applications for Azure was. The scale unit offers node level high availability. We run it across 27 datacenters around the world. Each Availability Zone has a distinct power source network and cooling. How To Configure A High Availability Cluster In Azure With The Standard Load Balancer Barracuda Campus.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://mountainss.files.wordpress.com/2018/12/networking-high-level-workloads.png" alt="Microsoft Azure Virtual Datacenter Hub Spoke Model A Network Perspective Cloud Azure Security Cloud And Datacenter Management Blog" title="Microsoft Azure Virtual Datacenter Hub Spoke Model A Network Perspective Cloud Azure Security Cloud And Datacenter Management Blog" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: mountainss.wordpress.com</p>
+<p>In this course Microsoft Azure Solutions Architect. The current marketplace FortiGate HA option in Azure is a highly scalable HA design. In this course Microsoft Azure Solutions Architect. Availability Zones are physically separate zones within an Azure region. Microsoft Azure Virtual Datacenter Hub Spoke Model A Network Perspective Cloud Azure Security Cloud And Datacenter Management Blog.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/sap/images/sap-s4hana.png" alt="Sap S 4hana In Linux On Azure Azure Architecture Center Microsoft Docs" title="Sap S 4hana In Linux On Azure Azure Architecture Center Microsoft Docs" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: docs.microsoft.com</p>
+<p>In this course Designing for High Availability on Microsoft Azure you will learn foundational knowledge of high availability using different services in Azure. Increase application resiliency and availability supported by 9999 uptime SLA for virtual machines. Miscellaneous Horizontally scaled instances. At the rack level we have redundant ToR switches. Sap S 4hana In Linux On Azure Azure Architecture Center Microsoft Docs.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://miro.medium.com/max/1838/1*EAy0GfBMch6XO-iME1E6BA.png" alt="High Availability Kafka Service In Microsoft Azure Cloud By Ada Yan Walmart Global Tech Blog Medium" title="High Availability Kafka Service In Microsoft Azure Cloud By Ada Yan Walmart Global Tech Blog Medium" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: medium.com</p>
+<p>At the rack level we have redundant ToR switches. Azure documentation The SLA for Azure Functions guarantee a 9995 uptime for each regional deployment for both app service plan and consumption plan. We heard from you that one of the most useful documents we provided in designing your applications for Azure was our guidance around designing for high availability and disaster recovery. Figure 10 High Availability network for Azure. High Availability Kafka Service In Microsoft Azure Cloud By Ada Yan Walmart Global Tech Blog Medium.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/media/high-availability-guide-suse/ha-suse.png" alt="Azure Vms High Availability For Sap Netweaver On Sles Azure Virtual Machines Microsoft Docs" title="Azure Vms High Availability For Sap Netweaver On Sles Azure Virtual Machines Microsoft Docs" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: docs.microsoft.com</p>
+<p>At a high level Azure AD is a high availability geo-redundant multi-tenanted multi-tiered cloud service that has delivered 9999 uptime for over a year now. Wait for the machine to get to the Running state. The current marketplace FortiGate HA option in Azure is a highly scalable HA design. First youll explore high availability concepts in Azure. Azure Vms High Availability For Sap Netweaver On Sles Azure Virtual Machines Microsoft Docs.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://help.tableau.com/current/server/en-us/Img/ts_azure_three_zone_primary_worker.png" alt="Self Deploy Tableau Server On Microsoft Azure In A Distributed Environment Tableau" title="Self Deploy Tableau Server On Microsoft Azure In A Distributed Environment Tableau" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: help.tableau.com</p>
+<p>SonarCloud helps you assess your code health and build applications with clean safe code. Azure supports high availability for most of its services including Azure VMs SQL Database and Azure Load Balancer. The current marketplace FortiGate HA option in Azure is a highly scalable HA design. Design for High Availability youll learn to design highly available applications in Azure. Self Deploy Tableau Server On Microsoft Azure In A Distributed Environment Tableau.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://docs.netapp.com/us-en/occm/media/diagram_ha_azure.png" alt="High Availability Pairs In Azure" title="High Availability Pairs In Azure" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: docs.netapp.com</p>
+<p>High availability is always of great concern for any IT administrator whether it is on-premises or using cloud services. Updated high availability and disaster recovery app design guidance. In this course Microsoft Azure Solutions Architect. 4 Make sure this VM has the IP address 10114. High Availability Pairs In Azure.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/media/sap-ha-availability-zones/active_active_zones_deployment.png" alt="Sap Workload Configurations With Azure Availability Zones Azure Virtual Machines Microsoft Docs" title="Sap Workload Configurations With Azure Availability Zones Azure Virtual Machines Microsoft Docs" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: docs.microsoft.com</p>
+<p>The scale unit offers node level high availability. Deploying VMs across Availability Zones helps to protect an application against datacenter-wide failures. Services - there are many software components within Azure Stack each providing leveraging high availability to keep the service up in the event of underlying HW failure. The scale unit offers node level high availability. Sap Workload Configurations With Azure Availability Zones Azure Virtual Machines Microsoft Docs.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://docs.microsoft.com/en-us/azure/architecture/example-scenario/infrastructure/media/ha-decision-tree.png" alt="High Availability And Disaster Recovery For Iaas Apps Azure Example Scenarios Microsoft Docs" title="High Availability And Disaster Recovery For Iaas Apps Azure Example Scenarios Microsoft Docs" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: docs.microsoft.com</p>
+<p>Attach a Data Disk to the First VM. Availability Sets address the need for high availability and resiliency by minimizing or eliminating the negative impact that Azure infrastructure maintenance or system faults may have on your business by distributing. Create an availability set. Azure Load Balancer rules are usually configured to load-balance incoming traffic for specific TCP or UDP port. High Availability And Disaster Recovery For Iaas Apps Azure Example Scenarios Microsoft Docs.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://docs.microsoft.com/azure/architecture/example-scenario/infrastructure/media/architecture-disaster-recovery-multi-tier-app.png" alt="Multi Tier Web Application Built For Ha Dr Azure Example Scenarios Microsoft Docs" title="Multi Tier Web Application Built For Ha Dr Azure Example Scenarios Microsoft Docs" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: docs.microsoft.com</p>
+<p>Deploy multiple VM instances in each application layer using availability set to ensure the VM instances are deployed across multiple availability zones fault domains and update domains. At the rack level we have redundant ToR switches. First youll explore high availability concepts in Azure. Create an availability set. Multi Tier Web Application Built For Ha Dr Azure Example Scenarios Microsoft Docs.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://miro.medium.com/max/1200/1*Ft5O2fS9yELy0HsR0II91g.png" alt="Azure Front Door Or Azure Cdn What Solution Will You Choose For Your High Availability Sites By Kishore Gopalan Medium" title="Azure Front Door Or Azure Cdn What Solution Will You Choose For Your High Availability Sites By Kishore Gopalan Medium" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: kishoregopalan.medium.com</p>
+<p>We run it across 27 datacenters around the world. For a list of supported regions and services see What are. A high availability HA ports load-balancing rule is a variant of a load-balancing rule configured only on an internal Standard Load Balancer and helps you load-balance TCP and UDP flows on all ports simultaneously. Ad Detects Bugs Code Smells and Vulnerabilities in your Azure DevOps repositories. Azure Front Door Or Azure Cdn What Solution Will You Choose For Your High Availability Sites By Kishore Gopalan Medium.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://www.cloudmovement.co.uk/wp-content/uploads/2019/10/3ea59a64-bd5b-4eef-bf86-099702811a61.png" alt="Sap On Azure Designing For Availability And Recoverability Cloudmovement" title="Sap On Azure Designing For Availability And Recoverability Cloudmovement" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: cloudmovement.co.uk</p>
+<p>At the rack level we have redundant ToR switches. Were pleased to announce that weve updated our guidance article on disaster recovery and high availability for applications built on Microsoft Azure. Now we will attach an empty disk to the VM in. Availability Sets address the need for high availability and resiliency by minimizing or eliminating the negative impact that Azure infrastructure maintenance or system faults may have on your business by distributing. Sap On Azure Designing For Availability And Recoverability Cloudmovement.</p>
+
+            </article>
+            <div class="row"><div class="posts-image" style="width:50%;"><a style="margin:5px;" href="/yacht-interior-design-florida/">&laquo;&laquo;&nbsp;17 Nice Yacht interior design florida for Girl</a></div>
+    <div class="posts-image" style="width:50%"><a style="margin:5px;" href="/bjarke-ingels-interior-design/">10 New Bjarke ingels interior design for Kids&nbsp;&raquo;&raquo;</a></div></div>
+            
+            <div class="mb-4">
+                <span class="taglist"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+<div class="container pt-4 pb-4">
+    
+    <h5 class="font-weight-bold spanborder"><span>Related Article</span></h5>
+    <div class="row">
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/artistic-wire-jewelry-designs/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/a0/4d/fe/a04dfe3e7a24ebde919e8c102907515d.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/artistic-wire-jewelry-designs/">32 Best Artistic wire jewelry designs for Adult</a>
+                        </h2>
+                        <small class="text-muted">Aug 22 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/artwork-shirt-design-contest/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/564x/5e/40/18/5e40181fe5001b7118b32b70f7f110a3.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/artwork-shirt-design-contest/">15 Awesome Artwork shirt design contest for Adult</a>
+                        </h2>
+                        <small class="text-muted">May 06 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/bcit-interior-design-part-time/"><img height="80" src="/img/placeholder.svg" data-src="https://www.idibc.org/wp-content/uploads/2021/06/3.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/bcit-interior-design-part-time/">25 Top Bcit interior design part time for Adult</a>
+                        </h2>
+                        <small class="text-muted">Nov 17 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/baby-frock-design-pic/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/d3/f7/95/d3f7956f28395bc4e58a9f22495b9125.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/baby-frock-design-pic/">23 Top Baby frock design pic for Kids</a>
+                        </h2>
+                        <small class="text-muted">Jul 23 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/best-web-tools-for-web-design/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/76/09/ab/7609ab6a6edd4b2b9049aea2a876be3e.png" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/best-web-tools-for-web-design/">26 Collection Best web tools for web design for Learning</a>
+                        </h2>
+                        <small class="text-muted">Dec 02 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/b-and-q-designer-radiators/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/18/e9/e4/18e9e455a4464d385407a87ca939ef3f.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/b-and-q-designer-radiators/">10 Awesome B and q designer radiators for Kindergarten</a>
+                        </h2>
+                        <small class="text-muted">Feb 27 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/web-design-in-afghanistan/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/b3/7a/e3/b37ae3db9d4ea09a3f3f5d5037d1ab53.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/web-design-in-afghanistan/">22 Nice Web design in afghanistan for Kindergarten</a>
+                        </h2>
+                        <small class="text-muted">May 12 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/black-and-red-bedroom-paint-designs/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/b9/ee/bd/b9eebd5cbbdc08f291e1afee4f49233e.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/black-and-red-bedroom-paint-designs/">23 Awesome Black and red bedroom paint designs for Adult</a>
+                        </h2>
+                        <small class="text-muted">Jan 01 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+</div>
+</div>
+</div>
+    </main>    <script async="async" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script async="async" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script async="async" src="https://indesigns.github.io/assets/js/theme.js"></script>
+    <script>function init(){var imgDefer=document.getElementsByTagName('img');for (var i=0; i<imgDefer.length; i++){if(imgDefer[i].getAttribute('data-src')){imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));}}}window.onload=init;</script>
+    
+    <footer class="bg-white border-top p-3 text-muted small">
+        <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div><span style="text-transform: capitalize;"><a href="https://indesigns.github.io/">All IDesign ideas</a> Copyright &copy; 2021.</span></div>
+            
+        </div>
+        </div>
+    </footer>
+
+
+<script type="text/javascript">
+var sc_project=12673169; 
+var sc_invisible=1; 
+var sc_security="7426f851"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12673169/0/7426f851/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+ 
+  </body>
+</html>

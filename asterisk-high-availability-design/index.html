@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv='content-language' content='en-us'>
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Asterisk High Availability Design, It will explain what high availability is and isnt - in the context of Asterisk. Eternity NE VoIP Matrixcomsec Ttg.">
+
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+
+    
+<title>24 Cool Asterisk high availability design for Learning | All IDesign ideas</title>
+<meta name="url" content="https://indesigns.github.io/asterisk-high-availability-design/" />
+<meta property="og:url" content="https://indesigns.github.io/asterisk-high-availability-design/">
+<meta property="article:author" content="Petter"> 
+<meta name="author" content="Petter">
+<meta name="geo.region" content="US">
+<meta name="geo.region" content="GB">
+<meta name="geo.region" content="CA">
+<meta name="geo.region" content="AU">
+<meta name="geo.region" content="IT">
+<meta name="geo.region" content="NL">
+<meta name="geo.region" content="DE">
+<link rel="canonical" href="https://indesigns.github.io/asterisk-high-availability-design/">
+<link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+<link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com">
+<link rel="preconnect" href="https://code.jquery.com">
+<link rel="dns-prefetch" href="https://code.jquery.com">
+<link rel="preconnect" href="https://i.pinimg.com">
+<link rel="dns-prefetch" href="https://i.pinimg.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://indesigns.github.io/assets/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://indesigns.github.io/assets/css/main.css">
+<link rel="stylesheet" href="https://indesigns.github.io/assets/css/theme.css">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "24 Cool Asterisk high availability design for Learning",
+    "headline": "24 Cool Asterisk high availability design for Learning",
+    "alternativeHeadline": "",
+    "description": "Wikipedia HA is iis a system design. Ive merged and committed the ocfheartbeatasterisk resource agent to. Asterisk high availability design",
+    "inLanguage": "en-us",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/indesigns.github.io\/asterisk-high-availability-design\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": "Petter"
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": "Petter"
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": "Petter"
+    },
+    "copyrightHolder" : "All IDesign ideas",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-07-25T17:10:49.00Z",
+    "datePublished": "2021-07-25T17:10:49.00Z",
+    "dateModified": "2021-07-25T17:10:49.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "All IDesign ideas",
+        "url": "https://indesigns.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/indesigns.github.io\/logo.png",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "https://indesigns.github.io/logo.png",
+    "url" : "https:\/\/indesigns.github.io\/asterisk-high-availability-design\/",
+    "wordCount" : "1402",
+    "genre" : [ "Drawing" ],
+    "keywords" : [ "Asterisk" , "high" , "availability" , "design" ]
+}
+</script>
+
+</head>
+  <body>    
+    <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="https://indesigns.github.io/"><span style="text-transform: capitalize;font-weight: bold;">All IDesign ideas</strong></a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+               
+               <li class="nav-item"><a class="nav-link" href="https://indesigns.github.io/contact/">Contact</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://indesigns.github.io/dmca/">Dmca</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://indesigns.github.io/privacy-policy/">Privacy Policy</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://indesigns.github.io/about/">About</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://indesigns.github.io/categories/drawing-online/" title="Drawing Online">Drawing Online</a></li></ul>
+        </div>
+    </div>
+    </nav>
+    <main role="main" class="site-content">
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row justify-content-between ">
+                <div class=" col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+                    <p class="text-uppercase font-weight-bold"><span class="catlist"><a class="sscroll text-danger" href="https://indesigns.github.io/categories/drawing-online"/>Drawing Online</a> . </span></p>
+                    <h1 class="display-4 mb-4 article-headline">24 Cool Asterisk high availability design for Learning</h1>
+                    <div class="d-flex align-items-center">
+                        <small class="ml-3">Written by Petter <span class="text-muted d-block mt-1">Jul 25, 2021 · <span class="reading-time">7 min read</span></span></small>
+                    </div>
+                </div>
+                <div class="col-md-6 pr-0 align-self-center">
+                    <img class="rounded" src="https://docs.infoblox.com/download/attachments/3244432/5.12.png" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" alt="24 Cool Asterisk high availability design for Learning"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-lg pt-4 pb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+            <article class="article-post">
+            <p>Wikipedia HA is iis a system design. Ive merged and committed the ocfheartbeatasterisk resource agent to. Asterisk high availability design</p><center>
+	
+</center> <!-- Head tag Code -->
+<p><strong>Asterisk High Availability Design</strong>, It will explain what high availability is and isnt - in the context of Asterisk. Eternity NE VoIP Matrixcomsec Ttg. But they all basically say they dont work with FreePBX 14 or 15 or the SNG7 based image. How Amazon Is Changing Our Lives and What the Worlds Best Companies Are Learning from It Brian Dumaine 455 Free.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://image.slidesharecdn.com/haasteriskonazure-v2-141211020853-conversion-gate02/95/high-availability-asterisk-and-freepbx-on-microsoft-azure-1-638.jpg?cb=1418263965" alt="High Availability Asterisk And Freepbx On Microsoft Azure" title="High Availability Asterisk And Freepbx On Microsoft Azure" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+High Availability Asterisk And Freepbx On Microsoft Azure From slideshare.net</p>
+<p>Mmoo9154 Mark Moore 2020-08-20 173640 UTC 1. There are a number of very old links from 2010 and 2013 talking about creating a high availability FreePBX cluster. If you want to further develop the high availability thought then you could use CephFS which will give you self-healing 100 available storage over multiple physical storage servers. High availability architecture is an intentional network design that provides redundancy anticipating a failure.</p>
+<h3 id="when-servers-become-overburdened-they-may-become-slow-or-even-crash">When servers become overburdened they may become slow or even crash.</h3><p><strong>Read another article</strong>:<br>
+<span class="navi text-left"><a class="badge badge-secondary" href="/residential-interior-design-edmonton/">Residential interior design edmonton</a></span>
+<span class="navi text-left"><a class="badge badge-dark" href="/semantics-in-design/">Semantics in design</a></span>
+<span class="navi text-left"><a class="badge badge-success" href="/roofline-design-checkatrade/">Roofline design checkatrade</a></span>
+<span class="navi text-left"><a class="badge badge-info" href="/servizi-di-web-design/">Servizi di web design</a></span>
+<span class="navi text-left"><a class="badge badge-dark" href="/price-for-logo-design-south-africa/">Price for logo design south africa</a></span></p>
+<p>HAast is in use at large automotive call centers airline call centers health care facilities 911 call centers emergency service gateways home care alert switches etc. To ensures a certain degree of operational continuityi While there may be some benefit to having both the backups and hand-offs in real-time such solutions can to be overly complex and way. Start by having a look at this voip-info web page. The heartbeat system notifies servers of outage Data synchronization system syncs data between 2 servers. Asterisk High Availability Design Guide.</p>
+<div class="d-block p-4">
+	<center>
+		 <script type="text/javascript">
+	atOptions = {
+		'key' : '044478bac56eb613662b93ef204db084',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.creativeformatsnetwork.com/044478bac56eb613662b93ef204db084/invoke.js"></scr' + 'ipt>');
+		</script>
+	</center>
+</div>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="http://www.eyepea.eu/system/files/images/ip-pbx_2.jpg" alt="Ip Pbx Www Eyepea Eu" title="Ip Pbx Www Eyepea Eu" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: eyepea.eu</p>
+<p>Hastexo s Martin Loschwitz has contributed a resource agent for the popular telephony stack. High Availability HA FreePBX 2020. When servers become overburdened they may become slow or even crash. High availability is a quality of infrastructure design at scale that addresses these latter considerations. Ip Pbx Www Eyepea Eu.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://www.researchgate.net/profile/Eric-Gamess/publication/327988314/figure/fig10/AS:843680105652228@1578160420352/Logical-Organization-for-the-Proxy-Registrar-Clustering-Scheme_Q320.jpg" alt="Pdf A Proposal For A High Availability Architecture For Voip Telephone Systems Based On Open Source Software" title="Pdf A Proposal For A High Availability Architecture For Voip Telephone Systems Based On Open Source Software" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: researchgate.net</p>
+<p>Asterisk High Availability Design March 8 2015 Page Contents Co-Dependence and Autonomy Data Synchronization and Scalability Synchronized Data Shared Data Detecting Failures Up Downstream Transparency Physical Peer Separation Encryption Speed of Fail Over Fault tolerance Load Balancing Stability and Support Commercial and Free Products. Asterisk SCF is NOT a. But they all basically say they dont work with FreePBX 14 or 15 or the SNG7 based image. Asterisk High Availability Design March 8 2015 Page Contents Co-Dependence and Autonomy Data Synchronization and Scalability Synchronized Data Shared Data Detecting Failures Up Downstream Transparency Physical Peer Separation Encryption Speed of Fail Over Fault tolerance Load Balancing Stability and Support Commercial and Free Products. Pdf A Proposal For A High Availability Architecture For Voip Telephone Systems Based On Open Source Software.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://www.researchgate.net/profile/Mohamed-Nassar-27/publication/44961555/figure/fig2/AS:307421399535617@1450306381439/Asterisk-illustrative-network.png" alt="Asterisk Illustrative Network Download Scientific Diagram" title="Asterisk Illustrative Network Download Scientific Diagram" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: researchgate.net</p>
+<p>To ensures a certain degree of operational continuityi While there may be some benefit to having both the backups and hand-offs in real-time such solutions can to be overly complex and way. The system level with a broad perspective The failure protection level to ensure against a long list of potential causes of failures. Asterisk High Availability Design Guide Michelle Dupuis. Asterisk High Availability coming to the Pacemaker cluster stack. Asterisk Illustrative Network Download Scientific Diagram.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://image.slidesharecdn.com/haasteriskonazure-v2-141211020853-conversion-gate02/95/high-availability-asterisk-and-freepbx-on-microsoft-azure-9-638.jpg?cb=1418263965" alt="High Availability Asterisk And Freepbx On Microsoft Azure" title="High Availability Asterisk And Freepbx On Microsoft Azure" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: slideshare.net</p>
+<p>Learn how to eliminate PBX down time and why High Availab. High availability is a quality of infrastructure design at scale that addresses these latter considerations. The Asterisk open-source PBX. The heartbeat system notifies servers of outage Data synchronization system syncs data between 2 servers. High Availability Asterisk And Freepbx On Microsoft Azure.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="http://ittroubleshooter.in/wp-content/uploads/2017/07/asterisk_setup_ittroubleshooter-237x300.png" alt="Configure Asterisk Ha Cluster With Drbd On Rhel Centos 7 It Troubleshooter" title="Configure Asterisk Ha Cluster With Drbd On Rhel Centos 7 It Troubleshooter" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: ittroubleshooter.in</p>
+<p>Its easy to confuse high availability with load balancing Next look at this voip-info web page. Asterisk High Availability coming to the Pacemaker cluster stack. Watch a presentation from the 2016 Asterisk conference on the state of high availability clustering of Asterisk. Registrations can be stored in a database and there exists other tools to. Configure Asterisk Ha Cluster With Drbd On Rhel Centos 7 It Troubleshooter.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://image.slidesharecdn.com/haasteriskonazure-v2-141211020853-conversion-gate02/95/high-availability-asterisk-and-freepbx-on-microsoft-azure-24-638.jpg?cb=1418263965" alt="High Availability Asterisk And Freepbx On Microsoft Azure" title="High Availability Asterisk And Freepbx On Microsoft Azure" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: slideshare.net</p>
+<p>Asterisk High Availability Design Guide Michelle Dupuis. The presentation focuses on design considerations and criteria for creating a high availability Asterisk cluster. High availability is the result of thorough planning and careful system design. The Pacemaker based Linux cluster stack is gaining a freshly supported service. High Availability Asterisk And Freepbx On Microsoft Azure.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://image.slidesharecdn.com/haasteriskonazure-v2-141211020853-conversion-gate02/95/high-availability-asterisk-and-freepbx-on-microsoft-azure-4-638.jpg?cb=1418263965" alt="High Availability Asterisk And Freepbx On Microsoft Azure" title="High Availability Asterisk And Freepbx On Microsoft Azure" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: slideshare.net</p>
+<p>In Search of High Availability HA In a conventional Asterisk implementation T1E1 connectivity is provided by PCI based interface cards on a single server thus making the server a single point of failure and reducing its overall integrity and availability. See how to turn any pair of Asterisk servers into a fault tolerant enterprise-caliber PBX cluster. High availability architecture is an intentional network design that provides redundancy anticipating a failure. To ensures a certain degree of operational continuityi While there may be some benefit to having both the backups and hand-offs in real-time such solutions can to be overly complex and way. High Availability Asterisk And Freepbx On Microsoft Azure.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://www.mirtapbx.com/images/architecture.png" alt="Mirta Pbx Multitenant Realtime Asterisk Pbx" title="Mirta Pbx Multitenant Realtime Asterisk Pbx" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: mirtapbx.com</p>
+<p>You can conduct high availability planning at two levels. In this tutorial the first FreePBXAsterisk hostname is asterisk-master with IP 192168051 and the second FreePBX Asterisks hostname is asterisk-slave with IP address 192168052. HAast is in use at large automotive call centers airline call centers health care facilities 911 call centers emergency service gateways home care alert switches etc. Asterisk SCF is NOT a. Mirta Pbx Multitenant Realtime Asterisk Pbx.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://www.voip-info.org/wp-content/uploads/converted_files/storage/users/332/39332/images/4815/thumbs/medium.png" alt="High Availability Asterisk Haast Voip Info" title="High Availability Asterisk Haast Voip Info" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: voip-info.org</p>
+<p>High Availability HA FreePBX 2020. Asterisk High Availability coming to the Pacemaker cluster stack. In this tutorial the first FreePBXAsterisk hostname is asterisk-master with IP 192168051 and the second FreePBX Asterisks hostname is asterisk-slave with IP address 192168052. Eternity NE VoIP Matrixcomsec Ttg. High Availability Asterisk Haast Voip Info.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://i.ytimg.com/vi/ICbSMMcTh6U/maxresdefault.jpg" alt="High Availability And Load Balancing Youtube" title="High Availability And Load Balancing Youtube" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: youtube.com</p>
+<p>See how to turn any pair of Asterisk servers into a fault tolerant enterprise-caliber PBX cluster. High availability is the result of thorough planning and careful system design. There is nothing explicitly built into Asterisk for such functionality. In Search of High Availability HA In a conventional Asterisk implementation T1E1 connectivity is provided by PCI based interface cards on a single server thus making the server a single point of failure and reducing its overall integrity and availability. High Availability And Load Balancing Youtube.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://www.researchgate.net/profile/Mohammed-Qadeer/publication/224562385/figure/fig4/AS:650470959886371@1532095770718/Asterisks-Architecture.png" alt="Asterisk S Architecture Download Scientific Diagram" title="Asterisk S Architecture Download Scientific Diagram" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: researchgate.net</p>
+<p>HAast meets the most stringent demands of performance autonomy functionality and ability to. HAast meets the most stringent demands of performance autonomy functionality and ability to. Asterisk SCF is NOT a. Asterisk High Availability Design Guide. Asterisk S Architecture Download Scientific Diagram.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://www.voip-info.org/wp-content/uploads/converted_files/storage/users/332/39332/images/4816/thumbs/medium.png" alt="High Availability Asterisk Haast Voip Info" title="High Availability Asterisk Haast Voip Info" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: voip-info.org</p>
+<p>These workloads include network device monitoring cross-platform monitoring and management group-specific. It will explain what is out there for open source commercial solutions for high availability. High-availability needs are addressed by building redundancy into the management group for the Operations Manager operational and data warehouse databases the gateway and management servers and specific workloads. There is nothing explicitly built into Asterisk for such functionality. High Availability Asterisk Haast Voip Info.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://www.voip-info.org/wp-content/uploads/converted_files/storage/users/332/39332/images/4812/thumbs/medium.png" alt="High Availability Asterisk Haast Voip Info" title="High Availability Asterisk Haast Voip Info" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: voip-info.org</p>
+<p>Our FloatingVirtual IP is 192168060. How Amazon Is Changing Our Lives and What the Worlds Best Companies Are Learning from It Brian Dumaine 455 Free. The system level with a broad perspective The failure protection level to ensure against a long list of potential causes of failures. If you do not have two identical FreePBX or just Asterisk sharing a single MySQL database follow this blog to configure. High Availability Asterisk Haast Voip Info.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://image.slidesharecdn.com/haasteriskonazure-v2-141211020853-conversion-gate02/95/high-availability-asterisk-and-freepbx-on-microsoft-azure-14-638.jpg?cb=1418263965" alt="High Availability Asterisk And Freepbx On Microsoft Azure" title="High Availability Asterisk And Freepbx On Microsoft Azure" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: slideshare.net</p>
+<p>Beyond High Availability for Asterisk Based Contact Centers Voice Solutions for Mission-Critical Contact Centers That Offer More than High Availability Voice communication is the primary medium in multi-channel contact center solutions. The main goals of the project are to bring to the Asterisk platform. It will explain what high availability is and isnt - in the context of Asterisk. Beyond High Availability for Asterisk Based Contact Centers Voice Solutions for Mission-Critical Contact Centers That Offer More than High Availability Voice communication is the primary medium in multi-channel contact center solutions. High Availability Asterisk And Freepbx On Microsoft Azure.</p>
+<p><img loading="lazy" width="100%" src="https://indesigns.github.io/img/placeholder.svg" data-src="https://docs.infoblox.com/download/attachments/3244432/5.12.png" alt="About Ha Pairs" title="About Ha Pairs" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';" class="center" />
+Source: docs.infoblox.com</p>
+<p>How Amazon Is Changing Our Lives and What the Worlds Best Companies Are Learning from It Brian Dumaine 455 Free. Wikipedia HA is iis a system design. Asterisk High Availability coming to the Pacemaker cluster stack. Backup Design Optimally backups should be stored offsite andor on multiple media to avoid location related disaster On to HA High availability has 2 major components. About Ha Pairs.</p>
+
+            </article>
+            <div class="row"><div class="posts-image" style="width:50%;"><a style="margin:5px;" href="/arts-and-crafts-bathroom-tile-designs/">&laquo;&laquo;&nbsp;24 Best Arts and crafts bathroom tile designs for Kindergarten</a></div>
+    <div class="posts-image" style="width:50%"><a style="margin:5px;" href="/web-designer-in-amritsar/">27 Nice Web designer in amritsar for Girl&nbsp;&raquo;&raquo;</a></div></div>
+            
+            <div class="mb-4">
+                <span class="taglist"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+<div class="container pt-4 pb-4">
+    
+    <h5 class="font-weight-bold spanborder"><span>Related Article</span></h5>
+    <div class="row">
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/bespoke-aquarium-design/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/c5/df/5f/c5df5f63528411fff94fcb52fae2d4a4--tanked-aquariums-fish-aquariums.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/bespoke-aquarium-design/">31 Awesome Bespoke aquarium design for Adult</a>
+                        </h2>
+                        <small class="text-muted">Mar 20 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/best-phoenix-tattoo-designs/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/5a/b1/a1/5ab1a1f4b063abdf874797ca072a5ccf.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/best-phoenix-tattoo-designs/">24 Nice Best phoenix tattoo designs for Learning</a>
+                        </h2>
+                        <small class="text-muted">May 25 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/aeisha-varsey-designer/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/a7/1a/78/a71a78981c4b9cd531e14332042239e2.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/aeisha-varsey-designer/">27 Best Aeisha varsey designer for Kindergarten</a>
+                        </h2>
+                        <small class="text-muted">Oct 09 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/aaram-design-gold/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/b4/97/ca/b497ca1a719cec5a2d1a7b7a73f82c74.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/aaram-design-gold/">26 Awesome Aaram design gold for Learning</a>
+                        </h2>
+                        <small class="text-muted">Nov 12 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/best-small-kitchen-design-layout/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/a9/c1/ba/a9c1ba1da47ad0b1e550777c80fe1e7f--small-kitchen-designs-small-kitchens.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/best-small-kitchen-design-layout/">20 New Best small kitchen design layout for Kindergarten</a>
+                        </h2>
+                        <small class="text-muted">Aug 16 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/american-front-door-designs/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/87/b8/8a/87b88a402f5886c5da636a7f873755d3--main-door-design-design-products.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/american-front-door-designs/">19 Nice American front door designs for Girl</a>
+                        </h2>
+                        <small class="text-muted">May 10 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/barkley-design/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/3c/4a/81/3c4a811d9483252833a706cc713804fb.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/barkley-design/">31 Collection Barkley design for Kindergarten</a>
+                        </h2>
+                        <small class="text-muted">Nov 28 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/best-office-uniform-design-for-female/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/a3/36/e8/a336e86b9effd7fd12fdaaaa1afd7fa6.jpg" onerror="this.onerror=null;this.src='https:\/\/indesigns.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/best-office-uniform-design-for-female/">19 Collection Best office uniform design for female for Learning</a>
+                        </h2>
+                        <small class="text-muted">Jan 18 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+</div>
+</div>
+</div>
+    </main>    <script async="async" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script async="async" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script async="async" src="https://indesigns.github.io/assets/js/theme.js"></script>
+    <script>function init(){var imgDefer=document.getElementsByTagName('img');for (var i=0; i<imgDefer.length; i++){if(imgDefer[i].getAttribute('data-src')){imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));}}}window.onload=init;</script>
+    
+    <footer class="bg-white border-top p-3 text-muted small">
+        <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div><span style="text-transform: capitalize;"><a href="https://indesigns.github.io/">All IDesign ideas</a> Copyright &copy; 2021.</span></div>
+            
+        </div>
+        </div>
+    </footer>
+
+
+<script type="text/javascript">
+var sc_project=12673169; 
+var sc_invisible=1; 
+var sc_security="7426f851"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12673169/0/7426f851/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+ 
+  </body>
+</html>
